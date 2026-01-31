@@ -1,24 +1,85 @@
 {
   "tr": {
     "netflix": {
-      "standart": 229.99,
+      "basic": 149.99,
+      "standard": 229.99,
       "premium": 299.99
     },
     "spotify": {
-      "premium": 59.9
+      "student": 32.9,
+      "individual": 59.9,
+      "family": 99.9
+    },
+    "youtube": {
+      "individual": 57.99,
+      "family": 115.99,
+      "student": 37.99
     },
     "disney+": {
-      "monthly": 135.0
+      "monthly": 134.99,
+      "yearly": 1349.9
+    },
+    "amazon_prime": {
+      "monthly": 39.0
+    },
+    "icloud+": {
+      "50gb": 12.99,
+      "200gb": 39.99,
+      "2tb": 129.99
+    },
+    "xbox_game_pass": {
+      "ultimate": 209.0
+    },
+    "gain": {
+      "monthly": 149.0
+    },
+    "exxen": {
+      "reklamli": 129.0,
+      "reklamsiz": 179.0
     }
   },
   "us": {
     "netflix": {
-      "standard": 15.49
+      "standard": 15.49,
+      "premium": 22.99
+    },
+    "spotify": {
+      "individual": 11.99,
+      "family": 19.99
+    },
+    "youtube": {
+      "individual": 13.99,
+      "family": 22.99
+    },
+    "hulu": {
+      "ads": 7.99,
+      "no_ads": 17.99
+    },
+    "hbo_max": {
+      "monthly": 15.99
+    },
+    "apple_tv+": {
+      "monthly": 9.99
     }
   },
   "uk": {
     "netflix": {
-      "standard": 10.99
+      "standard": 10.99,
+      "premium": 17.99
+    },
+    "spotify": {
+      "individual": 11.99,
+      "family": 19.99
+    },
+    "now_tv": {
+      "entertainment": 9.99,
+      "cinema": 9.99
+    },
+    "sky_stream": {
+      "basic": 26.0
+    },
+    "disney+": {
+      "standard": 7.99
     }
   }
 }
