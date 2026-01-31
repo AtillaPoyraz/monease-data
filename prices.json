@@ -1,22 +1,22 @@
 {
   "netflix": {
-    "standart": 229.00,
-    "premium": 299.00
+    "standart": 229.0,
+    "premium": 299.0
   },
   "spotify": {
-    "premium": 59.90,
-    "student": 32.90,
-    "family": 99.90
+    "premium": 59.9,
+    "student": 32.9,
+    "family": 99.9
   },
   "youtube premium": {
     "individual": 57.99,
     "family": 115.99
   },
   "disney+": {
-    "monthly": 135.00,
-    "yearly": 1350.00
+    "monthly": 135.0,
+    "yearly": 1350.0
   },
   "spor salonu": {
-    "ortalama": 2000.00
+    "ortalama": 2000.0
   }
 }
