@@ -1,65 +1,24 @@
 {
   "tr": {
     "netflix": {
-      "basic": 149.99,
-      "standard": 229.99,
+      "standart": 229.99,
       "premium": 299.99
     },
     "spotify": {
-      "student": 32.9,
-      "premium": 59.9,
-      "family": 99.9
-    },
-    "youtube premium": {
-      "individual": 57.99,
-      "family": 115.99,
-      "student": 37.99
+      "premium": 59.9
     },
     "disney+": {
-      "monthly": 135.0,
-      "yearly": 1350.0
-    },
-    "icloud+": {
-      "50gb": 12.99,
-      "200gb": 39.99,
-      "2tb": 129.99
+      "monthly": 135.0
     }
   },
   "us": {
     "netflix": {
-      "standard_ads": 6.99,
-      "standard": 15.49,
-      "premium": 22.99
-    },
-    "spotify": {
-      "student": 5.99,
-      "premium": 11.99,
-      "family": 19.99
-    },
-    "youtube premium": {
-      "individual": 13.99,
-      "family": 22.99
-    },
-    "icloud+": {
-      "50gb": 0.99,
-      "200gb": 2.99,
-      "2tb": 9.99
+      "standard": 15.49
     }
   },
   "uk": {
     "netflix": {
-      "standard_ads": 4.99,
-      "standard": 10.99,
-      "premium": 17.99
-    },
-    "spotify": {
-      "student": 5.99,
-      "premium": 11.99,
-      "family": 19.99
-    },
-    "youtube premium": {
-      "individual": 12.99,
-      "family": 19.99
+      "standard": 10.99
     }
   }
 }
