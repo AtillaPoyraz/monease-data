@@ -1,22 +1,14 @@
 {
-  "netflix": {
-    "standart": 229.0,
-    "premium": 299.0
+  "tr": {
+    "netflix": {"standart": 229.00, "premium": 299.00},
+    "spotify": {"premium": 59.90}
   },
-  "spotify": {
-    "premium": 59.9,
-    "student": 32.9,
-    "family": 99.9
+  "us": {
+    "netflix": {"standard": 15.49, "premium": 22.99},
+    "spotify": {"premium": 11.99}
   },
-  "youtube premium": {
-    "individual": 57.99,
-    "family": 115.99
-  },
-  "disney+": {
-    "monthly": 135.0,
-    "yearly": 1350.0
-  },
-  "spor salonu": {
-    "ortalama": 2000.0
+  "uk": {
+    "netflix": {"standard": 10.99, "premium": 17.99},
+    "spotify": {"premium": 11.99}
   }
 }
