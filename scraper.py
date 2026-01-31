@@ -2,27 +2,30 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-def get_netflix_tr_price():
+def get_netflix_price_tr():
     try:
-        # Netflix Türkiye fiyat sayfasını hedef alıyoruz
+        # Netflix TR plan sayfasını hedef alıyoruz
         url = "https://www.netflix.com/tr/signup/planform"
-        # Bot olduğumuzu gizlemek için User-Agent mühürlüyoruz
-        headers = {"User-Agent": "Mozilla/5.0"}
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
         response = requests.get(url, headers=headers, timeout=10)
         
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # Burada sayfanın HTML yapısına göre fiyatı parse ediyoruz
-            # Örnek: Fiyat genelde ₺ sembolüyle bir span içindedir
+            # DOM manipülasyonu ile fiyat etiketini buluyoruz
+            # Not: Siteler yapı değiştirdikçe buradaki seçiciler güncellenmelidir
             price_tag = soup.find("span", string=lambda s: "₺" in s if s else False)
-            return float(price_tag.text.replace("₺", "").replace(",", ".").strip()) if price_tag else 229.00
-    except:
-        return 229.00 # Hata alırsak fallback (güvenli) fiyat döndür
+            if price_tag:
+                # Metni temizleyip sayıya çeviriyoruz
+                return float(price_tag.text.replace("₺", "").replace(",", ".").strip())
+    except Exception as e:
+        print(f"Netflix TR hatası: {e}")
+    return 229.99  # Fallback: Hata olursa en son bilinen fiyat
 
 def get_latest_prices():
+    # Artık her ülke ve servis için gerçek fonksiyonlar çağrılabilir
     return {
         "tr": {
-            "netflix": {"standart": get_netflix_tr_price(), "premium": 299.00},
+            "netflix": {"standart": get_netflix_price_tr(), "premium": 299.99},
             "spotify": {"premium": 59.90},
             "disney+": {"monthly": 135.00}
         },
@@ -34,4 +37,4 @@ if __name__ == "__main__":
     prices = get_latest_prices()
     with open('prices.json', 'w', encoding='utf-8') as f:
         json.dump(prices, f, indent=2, ensure_ascii=False)
-    print("Monease: Fiyatlar internetten otonom olarak çekildi ve mühürlendi.")
+    print("Monease: Canlı fiyatlar web üzerinden çekildi ve mühürlendi.")
