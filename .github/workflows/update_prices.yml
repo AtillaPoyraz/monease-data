@@ -2,8 +2,8 @@ name: Otonom Fiyat Guncelleme
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Her gece TR saatiyle 03:00 civarı çalışır
-  workflow_dispatch: # İstediğimiz an manuel çalıştırmak için buton ekler
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,13 +17,17 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Kutuphaneleri Yukle # KRİTİK ADIM
+        run: |
+          pip install requests beautifulsoup4
+
       - name: Scraper'ı Calistir
         run: python scraper.py
 
-      - name: Degisiklikleri Kaydet (Push)
+      - name: Degisiklikleri Kaydet
         run: |
           git config --global user.name 'Monease Bot'
           git config --global user.email 'bot@monease.com'
           git add prices.json
-          git commit -m "Otonom guncelleme: $(date)" || exit 0
+          git commit -m "Otonom canli guncelleme: $(date)" || exit 0
           git push
