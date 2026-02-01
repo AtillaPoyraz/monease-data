@@ -1,9 +1,9 @@
-name: Otonom Fiyat Guncelleme
+name: Monease Otonom Veri Guncelleme
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Her gece 00:00'da otonom calis
+  workflow_dispatch: # Manuel tetikleme izni
 
 jobs:
   build:
@@ -17,17 +17,16 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Kutuphaneleri Yukle # KRİTİK ADIM
-        run: |
-          pip install requests beautifulsoup4
+      - name: Bağımlılıkları Yükle
+        run: pip install requests beautifulsoup4
 
-      - name: Scraper'ı Calistir
-        run: python scraper.py
+      - name: Fiyat Scraper'ı Çalıştır
+        run: python scrapers/price_scraper.py # Yeni klasör yolu mühürlendi
 
-      - name: Degisiklikleri Kaydet
+      - name: Değişiklikleri Push Et
         run: |
           git config --global user.name 'Monease Bot'
           git config --global user.email 'bot@monease.com'
-          git add prices.json
-          git commit -m "Otonom canli guncelleme: $(date)" || exit 0
+          git add data/prices/global_prices.json
+          git commit -m "Otonom fiyat guncelleme: $(date)" || exit 0
           git push
