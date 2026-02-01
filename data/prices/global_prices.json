@@ -1,8 +1,43 @@
 {
   "last_update": "2026-02-01",
-  "regions": [
-    "tr",
-    "us",
-    "uk"
-  ]
+  "tr": {
+    "netflix": {
+      "basic": 149.99,
+      "standard": 229.99,
+      "premium": 299.99
+    },
+    "spotify": {
+      "student": 32.9,
+      "individual": 59.9,
+      "family": 99.9
+    },
+    "youtube": {
+      "individual": 57.99,
+      "family": 115.99,
+      "student": 37.99
+    },
+    "disney+": {
+      "monthly": 134.99
+    },
+    "amazon_prime": {
+      "monthly": 39.0
+    }
+  },
+  "us": {
+    "netflix": {
+      "standard": 15.49,
+      "premium": 22.99
+    },
+    "spotify": {
+      "individual": 11.99
+    }
+  },
+  "uk": {
+    "netflix": {
+      "standard": 10.99
+    },
+    "spotify": {
+      "individual": 11.99
+    }
+  }
 }
