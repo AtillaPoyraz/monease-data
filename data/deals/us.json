@@ -1,1 +1,19 @@
 
+[
+  {
+    "id": "wise_transfer",
+    "name": "Wise",
+    "category": "transfer",
+    "description": "Save up to 3x on international transfers.",
+    "url": "https://wise.com",
+    "priority": 10
+  },
+  {
+    "id": "acorns_invest",
+    "name": "Acorns",
+    "category": "savings",
+    "description": "Invest your spare change automatically.",
+    "url": "https://www.acorns.com",
+    "priority": 9
+  }
+]
