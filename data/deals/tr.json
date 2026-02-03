@@ -1,25 +1,26 @@
-
-{
-  "country": "TR",
-  "last_updated": "2026-02-01T15:00:00Z",
-  "campaigns": [
-    {
-      "id": "tr-akbank-netflix",
-      "service_id": "netflix",
-      "bank_name": "Akbank",
-      "benefit_text": "%50 İade",
-      "short_desc": "Akbank kartınla Netflix ödemende 100 TL iade!",
-      "affiliate_url": "https://akbank.com/atilla-affiliate",
-      "usage_guide": "Akbank Mobil'den kampanyaya katılman gerekir."
-    },
-    {
-      "id": "tr-papara-spotify",
-      "service_id": "spotify",
-      "bank_name": "Papara",
-      "benefit_text": "15 TL Cash",
-      "short_desc": "Papara Card ile Spotify Premium ödemen anında iade.",
-      "affiliate_url": "https://papara.com/atilla-affiliate",
-      "usage_guide": "Harcamanı Papara Card ile yapman yeterli."
-    }
-  ]
-}
+[
+  {
+    "id": "nays_cashback",
+    "name": "Nays",
+    "category": "subscription",
+    "description": "Netflix ve Spotify ödemelerinde %50 iade kazan.",
+    "url": "https://naysapp.com.tr",
+    "priority": 10
+  },
+  {
+    "id": "binance_tr",
+    "name": "Binance TR",
+    "category": "investment",
+    "description": "Kripto yatırımlarında komisyon avantajı.",
+    "url": "https://www.trbinance.com",
+    "priority": 5
+  },
+  {
+    "id": "teb_marifetli",
+    "name": "TEB Marifetli Hesap",
+    "category": "savings",
+    "description": "Hoş geldin faizi ile paran değer kaybetmesin.",
+    "url": "https://www.teb.com.tr",
+    "priority": 8
+  }
+]
